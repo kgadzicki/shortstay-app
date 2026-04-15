@@ -1,13 +1,10 @@
-import SearchBar from "../App/Searchbar/SearchBar";
-import styles from "./header.module.css";
+import styles from "../Header/header.module.css";
 
-function Header() {
+function Header(props) {
   return (
     <>
-      <div className={styles.header + "container"}>
-        <div>
-          <SearchBar />
-        </div>
+      <div className={styles.header}>
+        <div>{props.children}</div>
       </div>
     </>
   );

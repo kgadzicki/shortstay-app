@@ -1,8 +1,8 @@
 import Hotel from "../Hotel/Hotel";
 
-const Hotels = () => {
+const Hotels = (props) => {
   return (
-    <div className="container">
+    <div>
       <div
         style={{
           border: "1px solid #cdcdcd",
@@ -10,9 +10,9 @@ const Hotels = () => {
         }}
       >
         <h2>Oferty:</h2>
-        <Hotel />
-        <Hotel />
-        <Hotel />
+        {props.hotels.map((hotel) => (
+          <Hotel {...hotel} key={hotel.id} />
+        ))}
       </div>
     </div>
   );
